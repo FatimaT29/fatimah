@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #548687;
+    text-align: center;
+}
+.container {
+    height: 70vh;
+}
+.game {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin ;
+}
+.box {
+    height: 18vmin;
+        width: 18vmin;
+        border-radius: 1rem;
+        border: none;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+        font-size: 8vmin;
+        color: #b0413e;
+        background-color: #ffffc7;
+}
+#reset-btn {
+    padding: 1rem ;
+    font-size: 1.2rem;
+    background-color: #191913;
+    color: white;
+    border-radius:1rem ;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tik tac toe </title>
+</head>
+<body>
+    <main>
+    <h1>Tik Tac Toe</h1>
+    <div class="container ">
+    <div class="game">
+        <button class="box"></button>
+   <button class="box"></button>
+    <button class="box"></button>
+    <button class="box"></button>
+    <button class="box"></button>
+    <button class="box"></button>
+    <button class="box"></button>
+    <button class="box"></button>
+    <button class="box"></button>
+    </div>
+
+    <button id="reset-btn">Restart Game  </button>
+</main>
+
+
+    <script>
+let boxes = document.querySelectorAll('.box');
+let resetBtn = document.querySelector('reset-btn');
+
+let turnO = true;
+
+const winPatterns = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+    ];
+
+boxes.forEach((box) => {
+    box.addEventListener('click', () => {
+console.log("box was clicked");
+ if(turnO ){
+    box.innerText = 'O';
+    turnO = false;
+     } else{ 
+        box.innerText = 'X';
+        turnO = true;
+     }
+     box.disabled = true;
+
+      const checkWinner = () => {
+        for ( let pattern of winPatterns) {
+            // console.log(pattern[0], pattern[1], pattern[2]);
+            // console.log(
+        let post1Val =  boxes[pattern[0]].innerText,
+          let post2Val = boxes[pattern[1]].innerText,
+           let post3Val = boxes[pattern[2]].innerText;
+           
+          if (postVal != ""&& pos2val != ""&& pos3val != ""){
+            if(postVal === pos2val && pos2val === pos3val){
+         console.log("We have a winner");
+            }
+          }
+        }
+        
+    );
+;
+    </script>
+</body>
+</html>

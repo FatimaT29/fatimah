@@ -1,0 +1,263 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sumit's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.navbar {
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar ul li a:hover {
+  color: yellow;
+}
+
+/* Header section */
+.main-file {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  margin-top: 20px;
+}
+
+.text-content {
+  max-width: 50%;
+  color: black;
+  font-size: large;
+}
+
+.text-content h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.black-text {
+  color: black;
+}
+
+.text-content p {
+  color: black;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 10px;
+
+}
+
+/* Social icons */
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons i {
+  font-size: 30px;
+  color: #333;
+}
+
+.social-icons i:hover {
+  color: rgb(32, 81, 230);
+}
+
+/* About button */
+.about-link {
+  width: 100px;
+  height: 40px;
+  border: 2px solid black;
+  font-size: large;
+  padding: 0.5rem;
+  margin-top: 15px;
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px 2px rgba(53, 18, 106, 0.522);
+  margin-top: 30px;
+}
+
+/* Circle box for image */
+.circle {
+  width: 300px;
+  height: 300px;
+  border: 2px solid black;
+  border-radius: 50%;
+  background-color: #eee;
+  margin-left: 30px;
+  background-size: cover;
+    background-position: center;
+    background-image:url(sumit-image-11june.jpg);
+    transition:font-size 2s ease-in-out,0.5s;
+    transition:box-shadow 2s ease-in-out;
+    box-shadow: red 0px 0px 20px rgba(255, 0, 0, 0.5); 
+}
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  margin-top: 50px;
+}
+.circle:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 5px 5px 5px 5px rgb(7, 169, 169);
+  font-size: 1.2rem;
+  ;
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.navbar {
+  animation: slideDown 0.8s ease-out forwards;
+}
+.text-content,
+.circle,
+.box1 {
+  opacity: 0;
+}
+/* --- Animations --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply animations after reload */
+.text-content {
+  animation: fadeInUp 1.2s ease-out forwards;
+}
+
+.circle {
+  animation: zoomIn 1s ease-out forwards;
+  animation-delay: 0.9s;
+}
+
+.box1 {
+  animation: fadeInLeft 1s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+</style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo">Sumit</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+
+  <header>
+    <div class="main-file">
+
+      <div class="text-content">
+        <h1>Hello, This is Sumit<br>Portfolio I'm a</h1>
+        <h1 style="color: blue;">Frontend Developer</h1>
+
+        <p>
+          I'm a passionate web developer with a background in HTML, CSS, and basic JavaScript. <br>
+          I’m focused on growing as a 
+          full-stack developer.
+        </p>
+
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+
+        <a href="porfolio.html"><div class="about-link"> 
+           <a href="portfolio-main4.2.html">About Me</a> </div></a> 
+      </div>
+
+      <div class="circle">
+
+      </div>
+
+    </div>
+  </header>
+
+   <footer class="footer">
+  <p>© 2025 Sumit Kumar. All rights reserved.</p>
+  <p>Made with ❤️ using HTML, CSS, and JavaScript</p>
+</footer>
+
+</body>
+</html>
